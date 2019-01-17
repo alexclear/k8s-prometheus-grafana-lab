@@ -1,0 +1,15 @@
+- hosts: all
+  become: yes
+  roles:
+  - role: local-persistent-volumes
+
+- import_playbook: ./kubespray/cluster.yml
+
+- hosts: kube1
+  become: yes
+  roles:
+  - role: helm
+#  - { role: k8s-namespace, k8s_namespace: "stolon" }
+#  - { role: k8s-stolon-cluster, stolon_helm_release: "stolon", k8s_namespace: "stolon" }
+#  - { role: postgresql-grafana }
+#  - { role: k8s-grafana, k8s_namespace: "stolon", grafana_helm_release: "grafana", k8s_grafana_admin_name: "test", k8s_grafana_admin_password: "eiquoth6aed" }
