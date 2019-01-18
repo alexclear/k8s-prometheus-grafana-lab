@@ -1,0 +1,18 @@
+- name: install a python client
+  apt: name=python-psycopg2
+
+- name: install psql
+  apt: name=postgresql-client
+
+- name: Wait for postgres to come up
+  shell: PGPASSWORD={{ stolon_superuser_password }} psql -h {{ ansible_host }} -d postgres -p {{ stolon_proxy_nodeport }} -U stolon -c "SELECT 1"
+  retries: 20
+  delay: 10
+  register: result
+  until: result is succeeded
+
+- name: create grafana PostgreSQL user
+  postgresql_user: name=grafana password={{ k8s_grafana_db_password }} port={{ stolon_proxy_nodeport }} login_host={{ ansible_host }} login_user=stolon login_password={{ stolon_superuser_password }} db=postgres
+
+- name: create grafana DB
+  postgresql_db: name=grafana encoding="UTF-8" template=template0 owner=grafana port={{ stolon_proxy_nodeport }} login_host={{ ansible_host }} login_user=stolon login_password={{ stolon_superuser_password }}

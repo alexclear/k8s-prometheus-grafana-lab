@@ -10,3 +10,15 @@ k8s_local_storage_pv_names:
   - pv9
 storage_class_name: local-storage
 local_volume_provisioner_enabled: true
+stolon_superuser_password: ahhae2eiNgiobei1noh8
+stolon_replication_password: Aht6Ja2ies1Hoh8zaech
+stolon_proxy_nodeport: 30404
+k8s_grafana_db_password: "itieReiloogh9pooj6ay"
+k8s_grafana_service_type: NodePort
+k8s_grafana_persistence_size: 1Gi
+k8s_grafana_db_type: postgres
+k8s_grafana_db_user: grafana
+k8s_grafana_db_host: stolon-proxy
+k8s_grafana_db_port: 5432
+k8s_grafana_db_name: grafana
+k8s_grafana_nodeport: 30408

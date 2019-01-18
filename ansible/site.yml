@@ -9,7 +9,8 @@
   become: yes
   roles:
   - role: helm
-#  - { role: k8s-namespace, k8s_namespace: "stolon" }
-#  - { role: k8s-stolon-cluster, stolon_helm_release: "stolon", k8s_namespace: "stolon" }
-#  - { role: postgresql-grafana }
-#  - { role: k8s-grafana, k8s_namespace: "stolon", grafana_helm_release: "grafana", k8s_grafana_admin_name: "test", k8s_grafana_admin_password: "eiquoth6aed" }
+  - { role: k8s-namespace, k8s_namespace: "prometheus" }
+  - { role: k8s-prometheus, k8s_namespace: "prometheus", prometheus_helm_release: "prometheus" }
+  - { role: k8s-stolon-cluster, stolon_helm_release: "stolon", k8s_namespace: "prometheus" }
+  - { role: postgresql-grafana }
+  - { role: k8s-grafana, k8s_namespace: "prometheus", grafana_helm_release: "grafana", k8s_grafana_admin_name: "test", k8s_grafana_admin_password: "do7oWee9" }
