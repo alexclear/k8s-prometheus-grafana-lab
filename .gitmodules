@@ -1,18 +1,3 @@
 [submodule "ansible/kubespray"]
 	path = ansible/kubespray
 	url = https://github.com/kubernetes-incubator/kubespray.git
-[submodule "ansible/roles/helm"]
-	path = ansible/roles/helm
-	url = https://github.com/kofonfor/ansible-role-helm.git
-[submodule "ansible/roles/k8s-namespace"]
-	path = ansible/roles/k8s-namespace
-	url = https://github.com/kofonfor/ansible-role-k8s-namespace.git
-[submodule "ansible/roles/k8s-prometheus"]
-	path = ansible/roles/k8s-prometheus
-	url = https://github.com/kofonfor/ansible-role-k8s-prometheus.git
-[submodule "ansible/roles/k8s-stolon-cluster"]
-	path = ansible/roles/k8s-stolon-cluster
-	url = https://github.com/kofonfor/ansible-role-k8s-stolon-cluster.git
-[submodule "ansible/roles/k8s-grafana"]
-	path = ansible/roles/k8s-grafana
-	url = https://github.com/kofonfor/ansible-role-k8s-grafana.git

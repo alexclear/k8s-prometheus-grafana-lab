@@ -1,0 +1,12 @@
+- src: https://github.com/kofonfor/ansible-role-helm.git
+  version: fb1c69efe79114f512f63fb0212383966739db50
+  name: helm
+- src: https://github.com/kofonfor/ansible-role-k8s-namespace.git
+  version: 0f7b98499fc56349b75b3aa3be46cfd7a555c9f1
+  name: k8s-namespace
+- src: https://github.com/kofonfor/ansible-role-k8s-rancher-local-path-provisioner.git
+  version: ee105fa862ae0cc58927e587edbb4d291869bbcc
+  name: k8s-rancher-local-path-provisioner
+- src: https://github.com/kofonfor/ansible-role-k8s-prometheus-operator.git
+  version: f0c91474bc60f4ee8fbe8fa688638779884af17b
+  name: k8s-prometheus-operator

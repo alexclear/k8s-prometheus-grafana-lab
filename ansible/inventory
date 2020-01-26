@@ -1,6 +1,6 @@
-kube1 ansible_host=172.16.137.22 access_ip=172.16.137.22 ip=172.16.137.22
-kube2 ansible_host=172.16.137.23 access_ip=172.16.137.23 ip=172.16.137.23
-kube3 ansible_host=172.16.137.24 access_ip=172.16.137.24 ip=172.16.137.24
+kube1 ansible_host=172.16.38.22 access_ip=172.16.38.22 ip=172.16.38.22 ansible_ssh_private_key_file=/vagrant/.vagrant/machines/kube1/virtualbox/private_key
+kube2 ansible_host=172.16.38.23 access_ip=172.16.38.23 ip=172.16.38.23 ansible_ssh_private_key_file=/vagrant/.vagrant/machines/kube2/virtualbox/private_key
+kube3 ansible_host=172.16.38.24 access_ip=172.16.38.24 ip=172.16.38.24 ansible_ssh_private_key_file=/vagrant/.vagrant/machines/kube3/virtualbox/private_key
 
 [kube-node]
 kube1
