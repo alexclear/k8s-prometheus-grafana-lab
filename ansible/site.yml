@@ -5,7 +5,7 @@
     command: kubectl version
     register: kubectl_result
 
-- hosts: localhost
+- hosts: all,localhost
   gather_facts: no
   run_once: True
   tasks:
