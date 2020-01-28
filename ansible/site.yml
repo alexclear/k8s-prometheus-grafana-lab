@@ -1,4 +1,21 @@
-#- import_playbook: ./kubespray/cluster.yml
+- hosts: kube1
+  become: yes
+  tasks:
+  - name: check if kubectl exists
+    command: kubectl version
+    register: kubectl_result
+
+- hosts: localhost
+  gather_facts: no
+  run_once: True
+  tasks:
+  - set_fact:
+      kubectl_not_installed: '{{ kubectl_result is failed }}'
+    delegate_to: localhost
+    delegate_facts: yes
+
+- import_playbook: ./kubespray/cluster.yml
+  when: hostvars.localhost.kubectl_not_installed
 
 - hosts: kube1
   become: yes
