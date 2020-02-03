@@ -4,6 +4,7 @@
   - name: check if kubectl exists
     command: kubectl version
     register: kubectl_result
+    ignore_errors: yes
 
 - hosts: all,localhost
   gather_facts: no
