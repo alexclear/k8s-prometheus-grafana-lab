@@ -1,3 +1,5 @@
+prometheus_operator_service_type: NodePort
+prometheus_operator_grafana_service_type: NodePort
 k8s_local_storage_pv_names:
   - pv1
   - pv2

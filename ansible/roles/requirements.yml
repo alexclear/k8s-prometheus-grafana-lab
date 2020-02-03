@@ -8,5 +8,5 @@
   version: ee105fa862ae0cc58927e587edbb4d291869bbcc
   name: k8s-rancher-local-path-provisioner
 - src: https://github.com/kofonfor/ansible-role-k8s-prometheus-operator.git
-  version: ea8a077f9a83f5ef6a09b9148509d1c3d5ec5064
+  version: 977464a7920ee5f851ed6c13b7e159e4bb91de0a
   name: k8s-prometheus-operator
