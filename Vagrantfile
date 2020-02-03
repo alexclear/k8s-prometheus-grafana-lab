@@ -1,9 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$KUBE1_IP = "172.16.38.22"
-$KUBE2_IP = "172.16.38.23"
-$KUBE3_IP = "172.16.38.24"
+$KUBE1_IP = "172.16.58.22"
+$KUBE2_IP = "172.16.58.23"
+$KUBE3_IP = "172.16.58.24"
 $KUBE1_MEM_MBS = 2048
 $KUBE2_MEM_MBS = 2048
 $KUBE3_MEM_MBS = 2048
